@@ -1,0 +1,11 @@
+[Unit]
+Description=mqtt-proxy
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/mqtt_proxy.py
+
+[Install]
+WantedBy=multi-user.target
